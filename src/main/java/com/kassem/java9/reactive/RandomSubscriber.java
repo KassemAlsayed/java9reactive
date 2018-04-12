@@ -72,7 +72,7 @@ public class RandomSubscriber implements Flow.Subscriber {
     }
 
     /**
-     * Similate the subscriber waiting X secs and then canceling its subscription
+     * Simulate the subscriber waiting X secs and then canceling its subscription
      *
      * @param sleepTime
      */

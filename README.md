@@ -1,5 +1,4 @@
 # Java 9 reactive flow Example with Maven 
-
 Read more in our blog post: [Getting Started with Java 9 Modules]
 
 ## Prerequisites:
@@ -11,4 +10,4 @@ Read more in our blog post: [Getting Started with Java 9 Modules]
 * `.\run.cmd` or `./run.sh`
 
 ## Known issues
-* At the moment, 
+* At the moment, no issues

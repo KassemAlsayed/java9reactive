@@ -1,6 +1,6 @@
-# Java 9 Reactive Flow Example with Maven 
+# Java 9 Reactive Streams
 
-This is an example of Java 9 reactive Flow. 
+This is an example of Java 9 reactive streams. 
 - It shows the interaction between a publisher and subscribers
 - Subscribers canceling after wiating X secs or after receiving a certain # of messages
 - It showes how theadds/pools are bing used/reused in the publisher

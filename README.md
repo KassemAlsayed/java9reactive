@@ -1,5 +1,10 @@
 # Java 9 Reactive Flow Example with Maven 
 
+This is an example of Java 9 reactive Flow. 
+- It shows the interaction between a publisher and subscribers
+- Subscribers canceling after wiating X secs or after receiving a certain # of messages
+- It showes how theadds/pools are bing used/reused in the publisher
+
 ## Prerequisites:
 * Maven >= 3.0.0
 * JDK 9

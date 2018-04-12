@@ -97,4 +97,13 @@ public class RandomSubscriber implements Flow.Subscriber {
     public String getSubscriberName() {
         return subscriberName;
     }
+
+
+    public int getMessagesReceived() {
+        return messagesReceived;
+    }
+
+    public boolean isCanceled() {
+        return isCanceled;
+    }
 }

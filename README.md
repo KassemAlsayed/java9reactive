@@ -1,5 +1,4 @@
-# Java 9 reactive flow Example with Maven 
-Read more in our blog post: [Getting Started with Java 9 Modules]
+# Java 9 Reactive Flow Example with Maven 
 
 ## Prerequisites:
 * Maven >= 3.0.0

@@ -9,16 +9,14 @@ This is an example of Java 9 reactive streams.
 - Subscribers canceling after wiating X secs or after receiving a certain # of messages
 - It showes how theadds/pools are bing used/reused in the publisher
 
-## Prerequisites:
-* Maven >= 3.0.0
-* JDK 9
+## Requires:
+* Maven 3.0.0 or later, JDK 9
 
-## Running the example
-* `mvn clean package`
-* `.\run.cmd` or `./run.sh`
+## Compiling/Running
+* `mvn clean package`, `.\run.cmd` or `./run.sh`
 
-## Known issues
-* At the moment, no issues
+## issues
+* None
 
 ## Sample output
 - Publisher: is emitting 5 messages, one every 1 sec.

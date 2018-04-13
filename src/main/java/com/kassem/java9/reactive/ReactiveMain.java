@@ -18,9 +18,10 @@ public class ReactiveMain {
             randomPublisher.subscribe(new RandomSubscriber(3, "subscriber2"));
             randomPublisher.start();
             while (randomPublisher.hasSubscribers()) {
-                // do nothing just wait
+                // just wait, allow the subscribers to get their msgs
             }
-            System.out.println("Finished - no more subscribers");
+            System.out.println("----------------");
+            System.out.println("All done - all subscribers got the messages they are interested in or canceled");
         }
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class RandomSubscriberTest {
 
-    RandomPublisher<RandomMessage> randomPublisher;
+    RandomPublisher randomPublisher;
     RandomSubscriber randomSubscriber1;
     RandomSubscriber randomSubscriber2;
 

@@ -24,7 +24,7 @@ public class RandomSubscriber implements Flow.Subscriber {
     @Override
     public void onSubscribe(Flow.Subscription subscription) {
 
-        System.out.println(getSubscriberName() +" number of messages " + Thread.currentThread().getName() + " interested in: " + maxMsgsIntrestedIn);
+        System.out.println(getSubscriberName() +": number of messages interested in: " + maxMsgsIntrestedIn + " "+ Thread.currentThread().getName());
 
         this.subscription = subscription;
 
@@ -33,7 +33,7 @@ public class RandomSubscriber implements Flow.Subscriber {
             subscription.request(NUM_MSGS_AT_A_TIME);
         } else {
             cancelSubscription(subscription);
-            System.out.println(getSubscriberName() +" Received "+ (messagesReceived) +" messages. Subscriber is not interested in any messages, canceling my subscription: " + Thread.currentThread().getName());
+            System.out.println(getSubscriberName() +": Received "+ (messagesReceived) +" messages. Subscriber is not interested in any messages, canceling my subscription: " + Thread.currentThread().getName());
 
         }
 
@@ -52,10 +52,10 @@ public class RandomSubscriber implements Flow.Subscriber {
         messagesReceived++;
 
         if (messagesReceived > maxMsgsIntrestedIn || maxMsgsIntrestedIn == 0) {
-            System.out.println(getSubscriberName() +" Received "+ (messagesReceived-1) +" messages. Subscriber is not interested anymore, canceling my subscription: " + Thread.currentThread().getName());
+            System.out.println(getSubscriberName() +": Received "+ (messagesReceived-1) +" messages. Subscriber is not interested anymore, canceling my subscription: " + Thread.currentThread().getName());
             cancelSubscription(subscription);
         } else {
-            System.out.println(getSubscriberName() +" recieved: " + item +" "+ Thread.currentThread().getName());
+            System.out.println(getSubscriberName() +": recieved: " + item +" "+ Thread.currentThread().getName());
             subscription.request(NUM_MSGS_AT_A_TIME);
         }
     }
@@ -67,7 +67,7 @@ public class RandomSubscriber implements Flow.Subscriber {
 
     @Override
     public void onComplete() {
-        System.out.println(getSubscriberName() +" completed... " + Thread.currentThread().getName());
+        System.out.println(getSubscriberName() +": completed... " + Thread.currentThread().getName());
         subscription.cancel();
     }
 
@@ -82,7 +82,7 @@ public class RandomSubscriber implements Flow.Subscriber {
                 try {
                     Thread.sleep(sleepTime * 1000);
                     if ( !isCanceled) {
-                        System.out.println(getSubscriberName() +" Received "+ messagesReceived + " messages. Waited for " + sleepTime + " sec, not interested anymore, canceling my subscription");
+                        System.out.println(getSubscriberName() +": Received "+ messagesReceived + " messages. Waited for " + sleepTime + " sec, not interested anymore, canceling my subscription");
                         subscription.cancel();
                     } else {
                         // subscription already canceled after getting all messages this subscriber is interested in

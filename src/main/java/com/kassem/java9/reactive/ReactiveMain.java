@@ -13,18 +13,10 @@ public class ReactiveMain {
 
     public static void main(String[] args) {
 
-        try (RandomPublisher<RandomMessage> randomPublisher = new RandomPublisher()) {
-
+        try (RandomPublisher randomPublisher = new RandomPublisher()) {
             randomPublisher.subscribe(new RandomSubscriber(10, "subscriber1"));
-
-            randomPublisher.subscribe(new RandomSubscriber(10, "subscriber2"));
-
-            List.of(RandomMessage.create("message1"),
-                    RandomMessage.create("message2"),
-                    RandomMessage.create("message3"),
-                    RandomMessage.create("message4"),
-                    RandomMessage.create("message5")).forEach(randomPublisher::submit);
-
+            randomPublisher.subscribe(new RandomSubscriber(3, "subscriber2"));
+            randomPublisher.start();
             while (randomPublisher.hasSubscribers()) {
                 // do nothing just wait
             }

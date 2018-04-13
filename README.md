@@ -1,6 +1,6 @@
 # Java 9 Reactive Streams
 
-For better compatibility, ease of use and standardization, Java 9 now includes interfaces for each of the Reactive Stream concepts in the Flow Concurrency library. This allows Java applications to depend on this one library for Reactive Stream, rather than deciding on a specific implementation. Most famous implementations (rxjava, akka, reactor...) are now implementing these java 9 Reactive Stream interfaces. This allows for switching the implementation library without changing your code.
+For better compatibility, ease of use and standardization, Java 9 now has interfaces for each of the Reactive Stream concepts in the Flow Concurrency library. This way Java applications depend on this one library for Reactive Stream, rather than working with a specific implementation. Most famous implementations (rxjava, akka, reactor...) are now implementing these java 9 Reactive Stream interfaces. This allows for switching the implementation library without changing your code.
 
 To better understand this, I implemented this little app that uses java 9 Reactive Stream that is in the Flow Concurrency Lib (java.util.concurrent). Note that this is different than java 8 reactive streams under org.reactivestreams which should not be used going forward... The interfaces names are called the same under both packages which could be confusing.
 

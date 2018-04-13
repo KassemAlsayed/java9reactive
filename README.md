@@ -17,28 +17,28 @@ This is an example of Java 9 reactive streams.
 * At the moment, no issues
 
 ## Sample output
-Publisher: is emitting 5 messages, one every 1 sec.
+- Publisher: is emitting 5 messages, one every 1 sec.
 
-subscriber1: number of messages interested in: 10 ForkJoinPool.commonPool-worker-2
+- subscriber1: number of messages interested in: 10 ForkJoinPool.commonPool-worker-2
 
-subscriber2: number of messages interested in: 3 ForkJoinPool.commonPool-worker-1
+- subscriber2: number of messages interested in: 3 ForkJoinPool.commonPool-worker-1
 
-subscriber1: recieved: RandomMessage{randomMessage='message1', randomNumber='60', randomDate=21:58:13.809854} ForkJoinPool.commonPool-worker-1
+- subscriber1: recieved: RandomMessage{randomMessage='message1', randomNumber='60', randomDate=21:58:13.809854} ForkJoinPool.commonPool-worker-1
 
-subscriber2: recieved: RandomMessage{randomMessage='message1', randomNumber='60', randomDate=21:58:13.809854} ForkJoinPool.commonPool-worker-2
+- subscriber2: recieved: RandomMessage{randomMessage='message1', randomNumber='60', randomDate=21:58:13.809854} ForkJoinPool.commonPool-worker-2
 
-subscriber1: recieved: RandomMessage{randomMessage='message2', randomNumber='23', randomDate=21:58:13.840820} ForkJoinPool.commonPool-worker-2
+- subscriber1: recieved: RandomMessage{randomMessage='message2', randomNumber='23', randomDate=21:58:13.840820} ForkJoinPool.commonPool-worker-2
 
-subscriber2: recieved: RandomMessage{randomMessage='message2', randomNumber='23', randomDate=21:58:13.840820} ForkJoinPool.commonPool-worker-1
+- subscriber2: recieved: RandomMessage{randomMessage='message2', randomNumber='23', randomDate=21:58:13.840820} ForkJoinPool.commonPool-worker-1
 
-subscriber1: recieved: RandomMessage{randomMessage='message3', randomNumber='92', randomDate=21:58:13.840861} ForkJoinPool.commonPool-worker-1
+- subscriber1: recieved: RandomMessage{randomMessage='message3', randomNumber='92', randomDate=21:58:13.840861} ForkJoinPool.commonPool-worker-1
 
-subscriber2: recieved: RandomMessage{randomMessage='message3', randomNumber='92', randomDate=21:58:13.840861} ForkJoinPool.commonPool-worker-2
+- subscriber2: recieved: RandomMessage{randomMessage='message3', randomNumber='92', randomDate=21:58:13.840861} ForkJoinPool.commonPool-worker-2
 
-subscriber1: recieved: RandomMessage{randomMessage='message4', randomNumber='32', randomDate=21:58:13.842169} ForkJoinPool.commonPool-worker-2
+- subscriber1: recieved: RandomMessage{randomMessage='message4', randomNumber='32', randomDate=21:58:13.842169} ForkJoinPool.commonPool-worker-2
 
-subscriber2: Received 3 messages. Subscriber is not interested anymore, canceling my subscription: ForkJoinPool.commonPool-worker-1
+- subscriber2: Received 3 messages. Subscriber is not interested anymore, canceling my subscription: ForkJoinPool.commonPool-worker-1
 
-subscriber1: Received 4 messages. Waited for 5 sec, not interested anymore, canceling my subscription
+- subscriber1: Received 4 messages. Waited for 5 sec, not interested anymore, canceling my subscription
 
-Finished - no more subscribers
+- Finished - no more subscribers
